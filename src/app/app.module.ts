@@ -11,6 +11,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { SongCardComponent } from './compoents/song-card/song-card.component';
 import { TopNavComponent } from './compoents/top-nav/top-nav.component';
 import { ButtonComponent } from './compoents/button/button.component';
+import { SearchbarService } from './service/searchbar.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ButtonComponent } from './compoents/button/button.component';
     MaterialModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    SearchbarService
   ],
   bootstrap: [AppComponent]
 })
