@@ -1,13 +1,9 @@
-<div class="contain-fluid">
+<!-- <div class="contain-fluid">
     <div id="carouselExampleDark" class="carousel carousel-dark slide" 
-    data-bs-ride="carousel" *ngFor="let l of songList">
-        <div class="carousel-inner">
+    data-bs-ride="carousel">
+        <div class="carousel-inner" *ngFor="let l of songList">
             <div class="carousel-item active" data-bs-interval="10000">
-                <img [src]="l.thumbnail" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <!-- <h2>{{b.original_title}}</h2>
-                    <p>{{b.overview}}</p> -->
-                </div>
+               
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
@@ -19,4 +15,17 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-</div>
+</div> -->
+
+<ngb-carousel *ngIf="showCarousel" #carousel [interval]="5000">
+    <ng-template ngbSlide  *ngFor="let l of songList">
+        <div style="background-color: black; height: 200px">
+            <div class="carousel-caption d-none d-md-block">
+                <p>{{l?.title}}</p>
+            </div>
+            <img [src]="l?.thumbnail" class="d-block w-100" alt="...">
+        </div>
+    </ng-template>
+
+</ngb-carousel>
+
