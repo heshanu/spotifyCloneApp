@@ -14,6 +14,7 @@ import { ButtonComponent } from './compoents/button/button.component';
 import { SearchbarService } from './service/searchbar.service';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { CarouslComponent } from './compoents/carousl/carousl.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
     TopNavComponent,
     ButtonComponent,
     NotfoundComponent,
-    DashboardComponent
+    DashboardComponent,
+    CarouslComponent
   ],
   imports: [
     BrowserModule,
