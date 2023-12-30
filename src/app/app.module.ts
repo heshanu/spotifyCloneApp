@@ -15,6 +15,7 @@ import { SearchbarService } from './service/searchbar.service';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { CarouslComponent } from './compoents/carousl/carousl.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { CarouslComponent } from './compoents/carousl/carousl.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MaterialModule
+    MaterialModule,
+    NgbModule
   ],
   providers: [
     provideClientHydration(),

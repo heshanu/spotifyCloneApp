@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { SongService } from '../../service/song.service';
 
 @Component({
   selector: 'app-carousl',
@@ -6,6 +7,15 @@ import { Component, Input } from '@angular/core';
   styleUrl: './carousl.component.css'
 })
 export class CarouslComponent {
-  @Input() songList: any[] = [];
+ 
+  showCarousel:boolean = true;
+  songList:any[] = [];
+  constructor(private songService: SongService) {
+    this.getSongsList();
+   }
+  
+  getSongsList() { 
+    this.songList = this.songService.songCards.slice(0, 5);
+  }
   
 }
