@@ -13,6 +13,7 @@ import { TopNavComponent } from './compoents/top-nav/top-nav.component';
 import { ButtonComponent } from './compoents/button/button.component';
 import { SearchbarService } from './service/searchbar.service';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { NotfoundComponent } from './pages/notfound/notfound.component';
     SongCardComponent,
     TopNavComponent,
     ButtonComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
