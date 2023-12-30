@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './song-card.component.css'
 })
 export class SongCardComponent {
-
+  getSongListCard: any[] = [];
+  
 }
