@@ -3,11 +3,11 @@
         <div class="spotify__home-container_side-bar-item">
             <img width="150" class="m-3 text-left" src="assets/download.png" alt="spotify light logo" />
         </div>
-        <div class="spotify__home-container_side-bar-item" >
-            <a>Home</a>
+        <div class="spotify__home-container_side-bar-item">
+            <a routerLink="/dashboard">Home</a>
         </div>
         <div class="spotify__home-container_side-bar-item" >
-            <a>Search</a>
+            <a routerLink="/search">Search</a>
         </div>
         <div class="spotify__home-container_side-bar-item" >
             <a>Your Library</a>
@@ -18,6 +18,6 @@
     </div>
     <div class="spotify__home-container_playlist-container col-10">
         <app-top-nav></app-top-nav>
+        <router-outlet></router-outlet>
    </div> 
-<router-outlet></router-outlet>
 </div>

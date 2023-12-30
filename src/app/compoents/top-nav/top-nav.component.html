@@ -5,14 +5,14 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" style="color:aliceblue" [ngClass]="" href="#">Home</a>
+            <li class="nav-item">
+                <a class="nav-link" style="color:aliceblue" routerLink="/dashboard" href="#">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" style="color:aliceblue" href="#">Features</a>
+                <a class="nav-link" style="color:aliceblue" routerLink="/search" href="#">Search</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" style="color:aliceblue" href="#">Pricing</a>
+                <a class="nav-link" style="color:aliceblue" routerLink="/pricing">Pricing</a>
             </li>
             <li class="nav-item">
                 <form class="form-inline">
@@ -21,19 +21,11 @@
             </li>
             <li  class="nav-item" style="margin-left: 600px;">
                 <div>
-                    <a class="login" style="padding: 10px 10px 10px 10px " href="#contact">Login</a>
-                    <a class="signup" style="padding: 10px 10px 10px 10px" href="#contact">SignUp</a>
+                    <a class="login" style="padding: 10px 10px 10px 10px " routerLink="/">Login</a>
+                    <a class="signup" style="padding: 10px 10px 10px 10px" routerLink="/signup">SignUp</a>
                 </div>
             </li>
             
         </ul>
     </div>
 </nav>
-
-<!-- <nav class="navbar navbar-light bg-light justify-content-between">
-    <a class="navbar-brand">Navbar</a>
-    <form class="form-inline">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-</nav> -->
