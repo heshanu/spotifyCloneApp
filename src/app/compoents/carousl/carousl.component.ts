@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-carousl',
@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './carousl.component.css'
 })
 export class CarouslComponent {
-
+  @Input() songList: any[] = [];
+  
 }
