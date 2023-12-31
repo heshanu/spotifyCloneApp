@@ -31,7 +31,7 @@ export class SongService {
         'https://en.wikialpha.org/mediawiki/images/archive/5/50/20220720185634%21Ponishare-verified.png',
       title: 'Romantic Songs',
       description: 'Relax and indulge with beautiful piano pieces',
-      song_link: "../../assets/Linkin_Park_-_Numb_.mp3",
+      song_link: "Linkin_Park_-_Numb_.mp3",
     
     },
     {
@@ -40,7 +40,7 @@ export class SongService {
         'https://en.wikialpha.org/mediawiki/images/archive/5/50/20220720185634%21Ponishare-verified.png',
       title: 'Peaceful Songs',
       description: 'Relax and indulge with beautiful piano pieces',
-      song_link: "../../assets/2.mp3"
+      song_link: "2.mp3"
     },
     {
       song_id: 3,

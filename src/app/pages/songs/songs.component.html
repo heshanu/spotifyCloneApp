@@ -7,7 +7,7 @@
     <mat-card-content>
         <p style="color: white;">{{selectedSong?.description}}</p>
         <audio controls style="margin-left: 5px;margin-right: 5px;">
-            <source [src]="['selectedSong?.song_link']">
+            <source src='../../../assets/{{selectedSong?.song_link}}|| ../../2.mp3 '>
             Your browser does not support the audio element.
         </audio>
         <mat-card-actions style="color: white;">
