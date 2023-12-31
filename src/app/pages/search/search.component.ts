@@ -10,7 +10,7 @@ export class SearchComponent implements OnInit{
   constructor(private searchService: SearchbarService,private songService:SongService) { }
   selectedSong:any;
   songName!: string;
-
+  
   ngOnInit(): void {
     this.searchService.songName.subscribe((value) => {
       this.songName = value;
