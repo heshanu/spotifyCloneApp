@@ -4,12 +4,12 @@
             <img width="150" class="m-3 text-left" src="assets/download.png" alt="spotify light logo" />
         </div>
         <div class="spotify__home-container_side-bar-item">
-            <a routerLink="/dashboard">Home</a>
+            <a [routerLink]="['/dashboard']" (click)="onNavigation('home')">Home</a>
         </div>
-        <div class="spotify__home-container_side-bar-item" >
-            <a routerLink="/search">Search</a>
+        <div class="spotify__home-container_side-bar-item" (click)="onSearch()">
+            <a [routerLink]="['/search']">Search</a>
         </div>
-        <div class="spotify__home-container_side-bar-item" >
+        <div class="spotify__home-container_side-bar-item" (click)="onNavigation('libary')">
             <a>Your Library</a>
         </div>
         <div class="spotify__home-container_side-bar-item">

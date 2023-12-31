@@ -1,13 +1,18 @@
 import { Component } from '@angular/core';
 import { SearchbarService } from '../../service/searchbar.service';
+import { NavigationEnd, Router } from '@angular/router';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  constructor(private sb: SearchbarService) { }
+  currentRoute!: any;
+  constructor(private sb: SearchbarService, private router: Router) {
+     this.onSearch();   
+  }
   isSearchFieldVisible: boolean = false;
+
  public browserAll = [
     {
       bgColor: 'red',
@@ -102,10 +107,7 @@ export class HomeComponent {
   ];
 
   ngOnInit(): void {
-    this.sb.isSearchVisible.subscribe((value) => {
-      this.isSearchFieldVisible = value;
-      console.log(`value`, value);
-    });
+   this.onSearch();
   }
 
   onInputFilterRes($event: string) {
@@ -115,6 +117,33 @@ export class HomeComponent {
     console.log(res);
   }
 
+  onSearch(): void{ 
+    this.router.url === '/search' ? this.sb.isSearchVisible.next(true)
+      : this.sb.isSearchVisible.next(false); 
+    // if (this.actRouter.snapshot.routeConfig?.path === 'search') {
+    //   this.sb.isSearchVisible.next(true);
+    // } else {
+    //   this.sb.isSearchVisible.next(false);
+    // }
+
+    // this.currentRoute = this.router.navigateByUrl('/search');
+    // console.log(`currentRoute`, this.currentRoute);
+    
+          
+      // filter((event: any) => event instanceof NavigationEnd)
+      //     .subscribe((event:any)=> 
+      //      {
+      //       this.currentRoute = event.url;   
+      //       if (this.currentRoute === '/search'){
+      //         this.sb.isSearchVisible.next(true);
+      //        } else { 
+      //         this.sb.isSearchVisible.next(false);
+      //       }
+      //         console.log(event);
+      //      });
+    
+  }
+
   onNavigation(pageName: string) {
     if (pageName === 'search') {
       this.sb.isSearchVisible.next(true);
@@ -122,5 +151,5 @@ export class HomeComponent {
       this.sb.isSearchVisible.next(false);
     }
   }
-  
+
 }
