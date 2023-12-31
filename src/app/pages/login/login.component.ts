@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 
 import { Form, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -9,6 +10,7 @@ import { Form, FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+  constructor(private route:Router) { } 
   private fb = inject(FormBuilder);
   addressForm:FormGroup= this.fb.group({
 
@@ -85,17 +87,23 @@ export class LoginComponent {
     let email = this.addressForm.value.email;
     let username= this.addressForm.value.userName;
     
-    if (this.validateCreditials()) {
+     console.log(``,this.validateCreditials());
+    if (this.validateCreditials() == true) {
+      this.route.navigate(['/dashboard']);
       alert('Login Success');
+    } else { 
+    this.route.navigate(['/']);
     }
     this.addressForm.reset();
+
   }
 
   validateCreditials(): boolean{
     let email = this.addressForm.value.email;
     let username = this.addressForm.value.userName;
-    if (email == 'h@gmail.com' || username == 'heshan') {
+    if (email === 'h@gmail.com' || username === 'heshan') {
+      
       return true;
-    }else return false;
+    } else { return false; }
   }
 }
