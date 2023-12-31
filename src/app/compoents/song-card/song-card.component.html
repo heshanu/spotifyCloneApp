@@ -4,13 +4,7 @@
         <div class="row">
             <h5 class="text-white">Trending Movies</h5>
             <div class="rowposter mt-3 p-2" style="box-shadow: inset">
-                <!-- <div *ngFor="let s of songListCard" 
-                style="display:inline-block;border:green 2px solid;margin: 20px 20px 20px 20px;max-width: 200px;">
-                    <h5 style="color:white">{{s?.title}}</h5>
-                    <img style="height:100px;width:100px;"  [src]="s?.thumbnail" 
-                     alt="...">
-                </div> -->
-               
+            
                 <mat-card class="example-card" *ngFor="let s of songListCard" style="display:inline-block;">
                     <mat-card-header>
                         <div mat-card-avatar 
@@ -19,9 +13,13 @@
                     </mat-card-header>
                     <img mat-card-image 
                     style="height:100px;width:100px;margin:20px 20px 20px 20px;margin-left:100px;"
-                     [src]="s?.thumbnail" alt="Photo of a Shiba Inu">
+                     [src]="['../../../assets/Untitled.jpeg']" alt="Photo of a Shiba Inu">
                     <mat-card-content>
                         <p style="color: white;">{{s?.description.substring(0, 50)}}</p>
+                        <audio controls style="margin-left: 5px;margin-right: 5px;">
+                            <source [src]="['../../../assets/Linkin_Park_-_Numb_.mp3']" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
                         <mat-card-actions style="color: white;">
                             <button mat-button>LIKE</button>
                             <button mat-button>SHARE</button>
