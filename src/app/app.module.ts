@@ -16,6 +16,7 @@ import { NotfoundComponent } from './pages/notfound/notfound.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { CarouslComponent } from './compoents/carousl/carousl.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
-    NgbModule
+    NgbModule,
+    BrowserAnimationsModule
   ],
   providers: [
     provideClientHydration(),

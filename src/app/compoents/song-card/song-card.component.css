@@ -39,3 +39,22 @@
     padding: 20px;
     text-transform: capitalize;
 }
+
+.example-card {
+    max-width:300px;
+   max-height: 400px;
+   margin: 20px 20px 20px 20px;
+    border-radius: 12px;
+    border:green 2px solid;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+}
+
+.example-header-image-test{
+    background-image:url("../../../assets/download.png");
+    background-size: cover;
+}

@@ -18,7 +18,7 @@
 </div> -->
 
 <ngb-carousel *ngIf="showCarousel" #carousel [interval]="5000">
-    <ng-template ngbSlide  *ngFor="let l of songList">
+    <ng-template ngbSlide  *ngFor="let l of songCard">
         <div style="background-color: black; height: 200px">
             <div class="carousel-caption d-none d-md-block">
                 <p>{{l?.title}}</p>
