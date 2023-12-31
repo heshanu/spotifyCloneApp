@@ -22,8 +22,12 @@ export class TopNavComponent implements OnInit{
     })
   }  
   
-  public onNavigationSearch() { 
-    this.searchService.isSearchVisible.next(true);
+   onNavigation(pageName: string) {
+    if (pageName === 'search') {
+      this.searchService.isSearchVisible.next(true);
+    } else {
+      this.searchService.isSearchVisible.next(false);
+    }
   }
 }
   
