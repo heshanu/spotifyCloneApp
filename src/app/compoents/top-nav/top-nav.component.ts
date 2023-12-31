@@ -29,15 +29,13 @@ export class TopNavComponent implements OnInit{
 
     this.searchService.songName.subscribe((value) => {
       this.songName = value;
-      console.log(`search song`, value);
     });
   }  
   
-  public formSubmit():void{ 
-    this.songName = this.searchService.songName.next(this.searchForm.value.songName);
-    alert(this.songName);
-    // console.log(`search song`, this.songName);
-    // alert(this.songName);
+  public formSubmit(): void{ 
+   // alert(this.searchForm.value.songName);
+    this.searchService.songName.next(this.searchForm.value.songName);
+    //alert(this.searchService.songName.value);
   }
 
   public onNavigation(pageName: string) {
