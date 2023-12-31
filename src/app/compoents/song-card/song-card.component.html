@@ -4,8 +4,8 @@
         <div class="row">
             <h5 class="text-white">Trending Movies</h5>
             <div class="rowposter mt-3 p-2" style="box-shadow: inset">
-            
-                <mat-card class="example-card" *ngFor="let s of songListCard" style="display:inline-block;">
+                <mat-card class="example-card" *ngFor="let s of songListCard" 
+                style="display:inline-block;" [routerLink]="['/song',s.song_id]">
                     <mat-card-header>
                         <div mat-card-avatar 
                         [ngClass]="s?.thumbnail?'example-header-image-test':'example-header-image'"></div>

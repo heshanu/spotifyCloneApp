@@ -9,16 +9,19 @@
                 <a class="nav-link" style="color:aliceblue" [routerLink]="['/dashboard']"   (click)="onNavigation('home')" href="#">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" style="color:aliceblue" routerLink="['/search']" (click)="onNavigation('search')" href="#">Search</a>
+                <a class="nav-link" style="color:aliceblue" [routerLink]="['/search']" (click)="onNavigation('search')" href="#">Search</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" style="color:aliceblue" routerLink="['/pricing']"  (click)="onNavigation('pricing')">Pricing</a>
+                <a class="nav-link" style="color:aliceblue" [routerLink]="['/pricing']"  (click)="onNavigation('pricing')">Pricing</a>
             </li>
             <li class="nav-item" *ngIf="isSearchFieldVisible">
-                <form class="form-inline">
-            <input class="form-control mr-sm-2" 
-            [value]="search" style="margin-left:200px;margin-top:10px;" 
-            type="search" placeholder="Search" aria-label="Search">
+                <form class="form-inline" (change)="formSubmit()" 
+                    [formGroup]="searchForm">
+                    <input class="form-control mr-sm-2" 
+            style="margin-left:200px;margin-top:10px;" 
+            type="search" placeholder="Search" aria-label="Search" 
+               formControlName="songName" placeholder="Serch Movie Here ..."
+                name="movieName">>
                 </form>
             </li>
             <li  class="nav-item" style="margin-left:500px" >

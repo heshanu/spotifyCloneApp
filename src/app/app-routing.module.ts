@@ -7,13 +7,15 @@ import { SearchComponent } from './pages/search/search.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { PlaylistComponent } from './pages/playlist/playlist.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { SongsComponent } from './pages/songs/songs.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'search', component: SearchComponent },
   {path:'dashboard',component:DashboardComponent},
   { path: 'signup', component: SignupComponent },
-  {path:'playList',component:PlaylistComponent},
+  { path: 'playList', component: PlaylistComponent },
+  {path:'song/:id',component:SongsComponent},
   {path:'**',component:NotfoundComponent}
 ];
 
