@@ -18,12 +18,8 @@ export class SearchComponent implements OnInit{
       this.selectedSong = this.songService.songCards.filter((v: any) => {
         return v.title === this.songName;
       });
-      
     });
 
   }
-  
-
-  
 
 }
