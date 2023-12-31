@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
+import { SearchbarService } from '../../service/searchbar.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+  constructor(private sb: SearchbarService) { }
+  isSearchFieldVisible: boolean = false;
  public browserAll = [
     {
       bgColor: 'red',
@@ -97,9 +100,13 @@ export class HomeComponent {
       song_link: '',
     },
   ];
-  // constructor(public sb: SearchBarService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.sb.isSearchVisible.subscribe((value) => {
+      this.isSearchFieldVisible = value;
+      console.log(`value`, value);
+    });
+  }
 
   onInputFilterRes($event: string) {
     const res = this.browserAll.filter(
@@ -108,12 +115,12 @@ export class HomeComponent {
     console.log(res);
   }
 
-  // onNavigation(pageName: string) {
-  //   if (pageName === 'search') {
-  //     this.sb.isSearchVisible.next(true);
-  //   } else {
-  //     this.sb.isSearchVisible.next(false);
-  //   }
-  // }
+  onNavigation(pageName: string) {
+    if (pageName === 'search') {
+      this.sb.isSearchVisible.next(true);
+    } else {
+      this.sb.isSearchVisible.next(false);
+    }
+  }
   
 }
