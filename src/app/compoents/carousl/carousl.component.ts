@@ -8,14 +8,15 @@ import { SongService } from '../../service/song.service';
 })
 export class CarouslComponent {
  
-  showCarousel:boolean = true;
-  songList:any[] = [];
+  @Input() showCarousel: boolean = true;
+  songCard: any[] = [];
+  
   constructor(private songService: SongService) {
     this.getSongsList();
    }
   
   getSongsList() { 
-    this.songList = this.songService.songCards.slice(0, 5);
+    this.songCard = this.songService.songCards.slice(0, 5);
   }
   
 }
