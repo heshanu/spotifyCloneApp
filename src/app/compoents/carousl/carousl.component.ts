@@ -9,6 +9,7 @@ import { SongService } from '../../service/song.service';
 export class CarouslComponent {
  
   @Input() showCarousel: boolean = true;
+  @Input () songSelectedList:any[]= [];
   songCard: any[] = [];
   
   constructor(private songService: SongService) {
@@ -16,6 +17,7 @@ export class CarouslComponent {
    }
   
   getSongsList() { 
+    this.songSelectedList = this.songService.songCards.slice(0, 10);
     this.songCard = this.songService.songCards.slice(0, 5);
   }
   
