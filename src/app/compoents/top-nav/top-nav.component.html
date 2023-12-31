@@ -6,13 +6,13 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" style="color:aliceblue" routerLink="/dashboard" href="#">Home</a>
+                <a class="nav-link" style="color:aliceblue" [routerLink]="['/dashboard']"   (click)="onNavigation('home')" href="#">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" style="color:aliceblue" routerLink="/search" (click)="onNavigationSearch()" href="#">Search</a>
+                <a class="nav-link" style="color:aliceblue" routerLink="['/search']" (click)="onNavigation('search')" href="#">Search</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" style="color:aliceblue" routerLink="/pricing">Pricing</a>
+                <a class="nav-link" style="color:aliceblue" routerLink="['/pricing']"  (click)="onNavigation('pricing')">Pricing</a>
             </li>
             <li class="nav-item" *ngIf="isSearchFieldVisible">
                 <form class="form-inline">
