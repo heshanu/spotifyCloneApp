@@ -1,0 +1,19 @@
+<mat-card class="example-card" style="display:inline-block;">
+    <mat-card-header>
+        <mat-card-title style="color: white;">{{selectedSong?.title}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image style="height:100px;width:100px;margin:20px 20px 20px 20px;margin-left:100px;"
+        [src]="['../../../assets/Untitled.jpeg']" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+        <p style="color: white;">{{selectedSong?.description}}</p>
+        <audio controls style="margin-left: 5px;margin-right: 5px;">
+            <source src='../../../assets/{{selectedSong?.song_link}}|| ../../2.mp3 '>
+            Your browser does not support the audio element.
+        </audio>
+        <mat-card-actions style="color: white;">
+            <button mat-button>LIKE</button>
+            <button mat-button>SHARE</button>
+        </mat-card-actions>
+    </mat-card-content>
+
+</mat-card>
